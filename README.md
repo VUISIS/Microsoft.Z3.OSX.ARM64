@@ -5,6 +5,8 @@ Dotnet build of Z3 for Mac OSX and ARM64.
 
     In repo directory:
     git clone git@github.com:Z3Prover/z3.git
+    
+    cd z3
 
     git checkout tags/z3-4.8.11 
 
