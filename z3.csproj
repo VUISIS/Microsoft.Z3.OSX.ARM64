@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Platform>AMD64</Platform>
+    <DefineConstants>$(DefineConstants);DOTNET_CORE</DefineConstants>
+    <DebugType>portable</DebugType>
+    <AssemblyName>Microsoft.Z3</AssemblyName>
+    <OutputType>Library</OutputType>
+    <Configuration>Release</Configuration>
+    <PackageId>Microsoft.Z3</PackageId>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <RuntimeFrameworkVersion>1.0.4</RuntimeFrameworkVersion>
+    <Version>4.8.11</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Microsoft</Authors>
+    <Company>Microsoft</Company>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <Description>Z3 is a satisfiability modulo theories solver from Microsoft Research.</Description>
+    <Copyright>Copyright Microsoft Corporation. All rights reserved.</Copyright>
+    <PackageTags>smt constraint solver theorem prover</PackageTags>
+    <AssemblyOriginatorKeyFile>/Users/stephen/git/z3/resources/z3.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
+    <RepositoryUrl>https://github.com/VUISIS/Microsoft.Z3.OSX.ARM64</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+  	<Content CopyToOutputDirectory="PreserveNewest" Include="../libz3.dylib" Link="libz3.dylib" Pack="true" PackagePath="runtimes/osx-arm64/native/libz3.dylib" />
+    <Compile Include="..\../src/api/dotnet\*.cs;*.cs" Exclude="bin\**;obj\**;**\*.xproj;packages\**" />
+  </ItemGroup>
+
+</Project>
